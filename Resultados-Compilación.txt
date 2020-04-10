@@ -1,0 +1,1 @@
+﻿1>------ Operación Compilar iniciada: proyecto: Almacen23, configuración: Debug Any CPU ------

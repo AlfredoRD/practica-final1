@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Almacen23.Models.AspNetUserRoles>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoleId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RolesName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoleId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RolesName)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id = item.UserId, id2 = item.RoleId }) |
+            
+            @Html.ActionLink("Eliminar", "Eliminar", new { id = item.UserId, id2 = item.RoleId })
+        </td>
+    </tr>
+}
+
+</table>

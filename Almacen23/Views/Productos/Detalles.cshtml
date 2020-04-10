@@ -1,0 +1,83 @@
+﻿@model Almacen23.Models.Productos
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Productos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Fecha de creaccion
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_de_creacion)
+        </dd>
+
+        <dt>
+            Fecha de vencimiento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_de_Vencimiento)
+        </dd>
+
+        <dt>
+            Nombre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            Descripciion
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            UDN
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UDM)
+        </dd>
+
+        <dt>
+            Costo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Costo)
+        </dd>
+
+        <dt>
+           Existencia
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Existencia)
+        </dd>
+
+        <dt>
+            Estado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Editar", new { id = Model.Id }) |
+    @Html.ActionLink("Regresar", "Index")
+</p>

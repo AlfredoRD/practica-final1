@@ -1,0 +1,67 @@
+﻿@model Almacen23.Models.Clientes
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Nombre
+        </dt>
+
+        <dd>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+           Apellido
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+
+        <dt>
+           Direccion
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            Telefono
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            Correo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Correo)
+        </dd>
+
+        <dt>
+           Tipo de Cliente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_de_cliente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Editar", new {  id = Model.Id  }) |
+    @Html.ActionLink("Regresar", "Index")
+</p>
